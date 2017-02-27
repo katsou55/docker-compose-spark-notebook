@@ -1,0 +1,9 @@
+version: "3"
+services:
+  spark-notebook:
+    image: andypetrella/spark-notebook:0.7.0-scala-2.11.8-spark-2.1.0-hadoop-2.7.3-with-hive
+    volumes: 
+      - ./spark-notebook-data:/opt/docker/notebooks
+      - ./data:/opt/docker/data
+    ports:
+      - 9001:9001
